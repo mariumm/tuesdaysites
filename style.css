@@ -230,8 +230,8 @@ a:focus-visible, summary:focus-visible {
 .wc-label { font-size: .85rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; opacity: .8; }
 .wc-title { font-size: 1.35rem; font-weight: 700; line-height: 1.15; }
 .wc-meta { font-size: .85rem; opacity: .75; }
-.wc-realtor { background: #E9DFD2; color: #1E1A17; }
-.wc-realtor .wc-title { font-family: var(--serif); font-weight: 600; font-size: 1.6rem; }
+.wc-realtor { background: #0E3B2E; color: #fff; }
+.wc-realtor .wc-label { color: #E2725B; opacity: 1; }
 .wc-mortgage { background: #0B2545; color: #fff; }
 .wc-mortgage .wc-label { color: #B8912F; opacity: 1; }
 .wc-mortgage .wc-title { font-family: var(--serif); font-weight: 500; }
