@@ -227,10 +227,21 @@ a:focus-visible, summary:focus-visible {
   transition: transform 120ms ease;
 }
 .work-card:hover { transform: translateY(-3px); }
+.work-card { position: relative; overflow: hidden; }
+.work-card > span { position: relative; z-index: 1; }
+.wc-img { position: absolute; z-index: 0; pointer-events: none; }
+.wc-cutout { right: -6%; top: 0; height: 72%; width: auto; object-fit: contain; object-position: top; opacity: .95; }
+.wc-mark { right: 20px; top: 20px; width: 110px; height: 110px; color: #fff; opacity: .9; }
+.wc-dash { right: 20px; top: 20px; width: 150px; background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 8px; display: block; }
+.wd-bar { display: block; height: 6px; width: 60%; border-radius: 3px; background: #14B8A6; margin-bottom: 8px; }
+.wd-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
+.wd-grid i { display: block; height: 16px; border-radius: 3px; background: #F1F5F9; }
+.wd-grid i.on { background: #14B8A6; opacity: .8; }
 .wc-label { font-size: .85rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; opacity: .8; }
 .wc-title { font-size: 1.35rem; font-weight: 700; line-height: 1.15; }
 .wc-meta { font-size: .85rem; opacity: .75; }
 .wc-realtor { background: #0E3B2E; color: #fff; }
+.wc-realtor .wc-title { max-width: 62%; }
 .wc-realtor .wc-label { color: #E2725B; opacity: 1; }
 .wc-mortgage { background: #0B2545; color: #fff; }
 .wc-mortgage .wc-label { color: #B8912F; opacity: 1; }
