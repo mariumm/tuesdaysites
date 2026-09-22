@@ -14,8 +14,7 @@ nav{display:flex;gap:22px;align-items:center}nav a{text-decoration:none;color:#f
 .hero-text{padding-bottom:64px;max-width:var(--max)}
 .kicker{color:var(--coral);font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
 .lede{font-size:1.1rem;opacity:.9}
-.hero-photo{height:min(560px,75vw);display:flex;align-items:flex-end;justify-content:center;position:relative}
-.hero-photo::before{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:78%;aspect-ratio:1;border-radius:50% 50% 0 0;background:var(--green-2)}
+
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:var(--max);margin:-1px auto 0;padding:32px var(--pad)}
 .stats div{background:#fff;border-radius:16px;padding:20px 22px}
 .stats strong{display:block;font-size:1.8rem;font-weight:800;letter-spacing:-.02em;color:var(--green)}.stats span{font-size:.9rem;color:var(--soft)}
@@ -32,4 +31,10 @@ cite{display:block;font-style:normal;font-weight:500;font-size:.9rem;color:var(-
 footer{background:var(--green);color:#fff;opacity:.7;padding:0 var(--pad) 24px;text-align:center;font-size:.8rem}
 @media(max-width:760px){.hero{grid-template-columns:1fr;gap:0}.hero-text{padding-bottom:32px}.hero-photo{height:300px}.stats,.grid{grid-template-columns:1fr}nav a:not(.pill){display:none}}
 
-.hero-photo img{position:relative;height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom;display:block}.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* hero cutout */
+.hero-photo{position:relative;height:min(520px,70vw);overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.hero-photo::before{content:"";position:absolute;bottom:-20%;left:50%;transform:translateX(-50%);width:80%;aspect-ratio:1;border-radius:50%;background:var(--green-2)}
+.hero-photo img{position:relative;z-index:1;height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom;display:block}
+@media(max-width:760px){.hero-photo{height:340px}}
